@@ -117,11 +117,12 @@ const alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "l", "m", "n", "o", 
 const charactersArray = ["g", "n", "u", "z", "d"];
 
 let newCharacters = [];
-for (let i = 0; i < alpha.length; i++) {
-  switch (alpha[i]) {
-    case charactersArray:
-      newCharacters.push(i + 1);
-      break;
+for (let i = 0; i < charactersArray.length; i++) {
+  for (let j = 0; j < alpha.length; j++) {
+    switch (alpha[j]) {
+      case charactersArray[i]:
+        newCharacters.push(j);
+    }
   }
 }
 console.log(newCharacters);
