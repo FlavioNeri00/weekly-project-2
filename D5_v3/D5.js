@@ -73,8 +73,7 @@ cars.push({
 });
 
 for (let i = 0; i < cars.length; i++) {
-  let obj = cars[i].trims.length--;
-  cars[i].trims[obj] = "";
+  cars[i].trims.pop();
 }
 
 console.log("6", cars);
